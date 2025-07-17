@@ -1,4 +1,5 @@
 import bcrypt from 'bcrypt';
+
 import postgres from 'postgres';
 import { invoices, customers, revenue, users } from '../lib/placeholder-data';
 
@@ -39,7 +40,7 @@ async function seedInvoices() {
       amount INT NOT NULL,
       status VARCHAR(255) NOT NULL,
       date DATE NOT NULL
-    );
+    );  
   `;
 
   const insertedInvoices = await Promise.all(
